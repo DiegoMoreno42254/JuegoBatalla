@@ -3,6 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+/**
+ *  Importamos las clases de modelo y Controlador
+ */
 package View;
 import Model.Personaje;
 import Controller. Ataque;
@@ -15,7 +19,7 @@ import javax.swing.JOptionPane;
 public class Vista1 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Vista1
+     * Se crea una nueva vista para la primaera batalla
      */
     public Vista1() {
         initComponents();
@@ -188,7 +192,10 @@ public class Vista1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Primer encuentro
+ * @param evt -Batalla por turnos pulsando un boton
+ */
     private void Ataque1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ataque1ActionPerformed
         // TODO add your handling code here:
         Texto.setText(bs.ataca(1));
@@ -197,7 +204,11 @@ public class Vista1 extends javax.swing.JFrame {
         end();
         
     }//GEN-LAST:event_Ataque1ActionPerformed
-
+/**
+ * Segundo Encuentro
+ * 
+ * @param evt Batalla por turnos pulsando un boton
+ */
     private void Ataque2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ataque2ActionPerformed
         // TODO add your handling code here:
         Texto.setText(bs2.ataca(2));
@@ -205,7 +216,10 @@ public class Vista1 extends javax.swing.JFrame {
         Jefe2.setValue(v2.getAcSalud());
         end2();
     }//GEN-LAST:event_Ataque2ActionPerformed
-
+/**
+ * Tercer encuentro
+ * @param evt Batalla por turnos pulsando un boton
+ */
     private void Atque3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Atque3ActionPerformed
         // TODO add your handling code here:
         Texto.setText(bs3.ataca(3));
@@ -213,7 +227,10 @@ public class Vista1 extends javax.swing.JFrame {
         Jefe3.setValue(v3.getAcSalud());
         end3();
     }//GEN-LAST:event_Atque3ActionPerformed
-
+/**
+ * Siguiente enfrentamiento, 3 vs 3
+ * @param evt Nueva ventana
+ */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Vista2 jFrame=new Vista2();
@@ -256,16 +273,25 @@ public class Vista1 extends javax.swing.JFrame {
             }
         });
     }
+    /**
+     * Creamos Los personajes
+     */
     Personaje h1= new Personaje("Batman", 100, 25, 15, 5),
             h2= new Personaje("Superman", 100, 30, 20, 2),
             h3= new Personaje("Flash", 100, 20, 10, 5),
             v1= new Personaje("Joker", 100, 25, 15, 2),
             v2= new Personaje("Zoth", 100, 20, 15, 3),
             v3= new Personaje("Deathstoke", 100, 20, 20, 6);
+    /**
+     * Creamos el campo de batalla
+     */
     Ataque bs= new Ataque(h1,v1);
     Ataque bs2=new Ataque(h2,v2);
     Ataque bs3=new Ataque(h3,v3);
     
+    /**
+     * Lo que sucede luego de las batallas, en especial deshabilitar los botones luego de pelear
+     */
     private void end() {
         if (h1.getAcSalud() ==0) {
             JOptionPane.showMessageDialog(null, "fin de la pelea. El ganador es "

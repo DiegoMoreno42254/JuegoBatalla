@@ -4,8 +4,12 @@
  * and open the template in the editor.
  */
 package Controller;
-//importamos la clase Personaje del paquete Modelo
-//esta es la parte donde se efectua el controlador 
+//
+//
+/**
+ * importamos la clase Personaje del paquete Modelo
+ * esta es la parte donde se efectua el controlador 
+ */
 
 import Model.Personaje;
 
@@ -15,20 +19,35 @@ import Model.Personaje;
  * @author Diego Miguel Moreno Duran
  */
 public class Ataque {
+    /**
+     * Se crean los objetos para la batalla
+     */
     
-    //Creamos los objetos
+    
     Personaje heroe;
     Personaje jefe;
     
+    /**
+     * Se declaran los objetos
+     * @param heroe
+     * @param jefe 
+     */
+    
     public Ataque(Personaje heroe, Personaje jefe){
-        //declaramos los objetos
+        
+        
         
         this.heroe=heroe;
         this.jefe=jefe;
         
         
     }
-    
+    /**
+     * se selecciona quien inicia la batalla segun su nivel de fuerza actual,
+     * se establecen quien ataca y quien defiende
+     * @param select
+     * @return 
+     */
     public String ataca(int select){
         String total= "";
         Personaje ataca, defiende;
@@ -51,6 +70,13 @@ public class Ataque {
         }
         return total;
     }
+    /**
+     * Seleccion de los ataques
+     * @param ataca
+     * @param defiende
+     * @param select
+     * @return 
+     */
     private String atackSelect(Personaje ataca, Personaje defiende, int select){
         String total= "";
         switch (select){

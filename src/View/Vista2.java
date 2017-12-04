@@ -4,19 +4,22 @@
  * and open the template in the editor.
  */
 package View;
+/**
+ * Importamos las clases de modelo y Controlador
+ */
 
 import Controller.Ataque;
 import Model.Personaje;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Asus i7
+ * Escenario Final. 3 vs 3 
+ * @author Diego Moreno Duran
  */
 public class Vista2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Vista2
+     * Creamos la batalla final, las barras de vidas se llenan
      */
     public Vista2() {
         initComponents();
@@ -191,7 +194,10 @@ public class Vista2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Batalla Final
+ * @param evt Batalla por turnos pulsando un boton
+ */
     private void Ataque4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ataque4ActionPerformed
         // TODO add your handling code here:
         Texto.setText(bs.ataca(1));
@@ -206,7 +212,10 @@ public class Vista2 extends javax.swing.JFrame {
         end4();
         
     }//GEN-LAST:event_Ataque4ActionPerformed
-
+/**
+ * Salida del juego
+ * @param evt Termina la batalla y se cierra el juego
+ */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         dispose();
@@ -246,15 +255,25 @@ public class Vista2 extends javax.swing.JFrame {
             }
         });
     }
+    /**
+     * Creamos Los personajes
+     */
     Personaje h1= new Personaje("Batman", 100, 25, 15, 5),
             h2= new Personaje("Superman", 100, 30, 20, 4),
             h3= new Personaje("Flash", 100, 20, 10, 7),
             v1= new Personaje("Joker", 100, 25, 15, 2),
             v2= new Personaje("Zoth", 100, 20, 20, 3),
             v3= new Personaje("Deathstoke", 100, 20, 5, 6);
+    /**
+     * Creamos el campo de batalla
+     */
     Ataque bs= new Ataque(h1,v1);
     Ataque bs2=new Ataque(h2,v2);
     Ataque bs3=new Ataque(h3,v3);
+    
+    /**
+     * Lo que sucede luego de las batalla, en especial deshabilitar los botones luego de pelear
+     */
     private void end4() {
         if (h1.getAcSalud() <=0 && h2.getAcSalud()<=0 && h3.getAcSalud()<=0) {
             JOptionPane.showMessageDialog(null, "fin de la pelea. Los Ganadores son "

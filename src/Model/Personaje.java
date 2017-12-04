@@ -6,9 +6,12 @@
 package Model;
 
 /**
- *
+ * Modelo del personaje
  * @author Diego Moreno
  */
+
+
+
 public class Personaje {
     private String nombre;
     private int salud;
@@ -43,126 +46,126 @@ public class Personaje {
     }
 
     /**
-     * @return the nombre
+     * @return Nombre del personaje
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param nombre Establecemos el Nombre
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the salud
+     * @return Salud inicial
      */
     public int getSalud() {
         return salud;
     }
 
     /**
-     * @param salud the salud to set
+     * @param salud Estblecemos la salud del personaje
+     * 
      */
     public void setSalud(int salud) {
         this.salud = salud;
     }
 
     /**
-     * @return the ataque
+     * @return Ataque
      */
     public int getAtaque() {
         return ataque;
     }
 
     /**
-     * @param ataque the ataque to set
+     * @param ataque Establecemos el ataque del personaje
      */
     public void setAtaque(int ataque) {
         this.ataque = ataque;
     }
 
     /**
-     * @return the defensa
+     * @return Defensa del personaje
      */
     public int getDefensa() {
         return defensa;
     }
 
     /**
-     * @param defensa the defensa to set
+     * @param defensa Establecemos la defensa del personaje
      */
     public void setDefensa(int defensa) {
         this.defensa = defensa;
     }
 
     /**
-     * @return the fuerza
+     * @return Fuerza del personaje
      */
     public int getFuerza() {
         return fuerza;
     }
 
     /**
-     * @param fuerza the fuerza to set
+     * @param fuerza Establecemos la fuerza del personaje
      */
     public void setFuerza(int fuerza) {
         this.fuerza = fuerza;
     }
 
     /**
-     * @return the acSalud
+     * @return Salud Actual
      */
     public int getAcSalud() {
         return acSalud;
     }
 
     /**
-     * @param acSalud the acSalud to set
+     * @param acSalud Se establece la salud actual del personaje
      */
     public void setAcSalud(int acSalud) {
         this.acSalud = acSalud;
     }
 
     /**
-     * @return the acAtaque
+     * @return the Ataque Actual
      */
     public int getAcAtaque() {
         return acAtaque;
     }
 
     /**
-     * @param acAtaque the acAtaque to set
+     * @param acAtaque Se establece el ataque actual del personaje
      */
     public void setAcAtaque(int acAtaque) {
         this.acAtaque = acAtaque;
     }
 
     /**
-     * @return the acDefensa
+     * @return DEfensa Actual
      */
     public int getAcDefensa() {
         return acDefensa;
     }
 
     /**
-     * @param acDefensa the acDefensa to set
-     */
+     * @param acDefensa Se establece la defensa actual del personaje     */
     public void setAcDefensa(int acDefensa) {
         this.acDefensa = acDefensa;
     }
 
     /**
-     * @return the acFuerza
+     * @return the Fuerza actual
      */
     public int getAcFuerza() {
         return acFuerza;
     }
 
     /**
-     * @param acFuerza the acFuerza to set
+     * @param acFuerza Se establece la fuerza actual del personaje
      */
     public void setAcFuerza(int acFuerza) {
         this.acFuerza = acFuerza;
