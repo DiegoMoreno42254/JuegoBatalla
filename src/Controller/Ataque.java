@@ -29,8 +29,8 @@ public class Ataque {
     
     /**
      * Se declaran los objetos
-     * @param heroe
-     * @param jefe 
+     * @param heroe Los buenos
+     * @param jefe Los malos
      */
     
     public Ataque(Personaje heroe, Personaje jefe){
